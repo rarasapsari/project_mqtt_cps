@@ -17,14 +17,14 @@ sudo apt update && sudo apt install -y mosquitto mosquitto-clients
 
 #### Menjalankan Broker
 
-Kamu bisa menjalankan broker secara langsung di foreground untuk melihat log:
+Jalankan broker secara langsung di foreground untuk melihat log:
 
 ```bash
 mosquitto -v
 
 ```
 
-Atau menjalankannya sebagai background service:
+Atau jalankan sebagai background service:
 
 ```bash
 sudo systemctl start mosquitto
@@ -100,7 +100,7 @@ python skenario3_publisher_topics.py
 
 ### Skenario 4 - Wildcard '+'
 
-Skenario ini menggabungkan fungsi publisher dan subscriber di dalam satu file tunggal. Kamu hanya memerlukan satu terminal.
+Skenario ini menggabungkan fungsi publisher dan subscriber di dalam satu file tunggal. Untuk menjalankan skenario ini hanya diperlukan satu terminal.
 
 * **Terminal 1:**
 ```bash
@@ -126,7 +126,7 @@ python skenario5_wildcard_hash.py
 
 ## Pengujian Manual dengan Mosquitto CLI
 
-Kamu juga bisa melakukan pengujian broker secara manual tanpa menggunakan script Python dengan memanfaatkan perintah bawaan dari Mosquitto CLI.
+Pengujian broker juga bisa dilakukan secara manual tanpa menggunakan script Python dengan memanfaatkan perintah bawaan dari Mosquitto CLI.
 
 ### 1. Subscribe Manual
 
@@ -143,9 +143,5 @@ Buka terminal lain untuk mengirimkan data payload sampel:
 
 ```bash
 mosquitto_pub -h localhost -t "smartroom/ruangA/temperature" -m '{"nilai":27.5}'
-
-```
-
-```
 
 ```
